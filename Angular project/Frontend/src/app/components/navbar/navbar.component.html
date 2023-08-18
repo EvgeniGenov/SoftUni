@@ -1,0 +1,20 @@
+<div class="navbar__wrapper">
+    <mat-toolbar class="navbar">
+        <div>
+            <ng-container *ngIf="!loginStatus()">
+                <a mat-button routerLink="/">My Courses</a>
+            </ng-container>
+        </div>
+        <div>
+            <ng-container *ngIf="loginStatus()">
+                <a mat-raised-button routerLink="register">Create Free Acount</a>
+                <a mat-raised-button routerLink="login">Login</a>
+            </ng-container>
+            <ng-container *ngIf="!loginStatus()">
+                <a mat-raised-button routerLink="user-page">My profile</a>
+                <a mat-raised-button routerLink="register" (click)="logout()"> Log out</a>
+            </ng-container>
+
+        </div>
+    </mat-toolbar>
+</div>

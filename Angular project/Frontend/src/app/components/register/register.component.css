@@ -1,0 +1,138 @@
+ body {
+    background-color: #022433;
+}
+/*
+.container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.reg-form {
+    min-width: 75px;
+    max-width: 500px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3em;
+    height: 400px;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.email {
+    min-width: 75px;
+    max-width: 500px;
+    width: 89%;
+}
+
+p {
+    font-weight: 300;
+    color: #146C94;
+    opacity: 0.8;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+span {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #146C94;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+a:hover {
+    text-shadow: 1px 1px 1px lightcyan;
+}
+
+a:active {
+    text-shadow: none;
+}
+
+::placeholder {
+    font-family: Montserrat, sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.register:focus {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    margin-top: 10px;
+    width: 150px;
+    font-size: 1rem;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.message {
+    text-decoration: none;
+    color: red;
+    font-size: 14px;
+    padding-top: 10px;
+} */
+p {
+    font-weight: 600;
+    font-size: 2rem;
+    color:#044c6b;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 500px;
+    border-radius: 20px;
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 450px;
+    height: 700px;
+}
+button[mat-raised-button]:disabled {
+    background-color:#55676e;
+}
+button[mat-raised-button]:enabled:hover {
+    background-color:#033449;
+}
+button[mat-raised-button] {
+    font-size: 1em;
+    padding: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color:#044c6b;
+    color: white;
+}
+

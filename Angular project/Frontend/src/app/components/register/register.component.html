@@ -1,0 +1,86 @@
+<div class="container">
+    <form class="reg-form" [formGroup]="formGroup">
+        <p>Create a CV account</p>
+        <mat-form-field class="register">
+            <mat-label>First name</mat-label>
+            <input appLettersOnly matInput type="text" formControlName="firstName" [ngClass]="{'invalid': formGroup.controls['firstName'].invalid && (formGroup.controls['firstName'].dirty || formGroup.controls['firstName'].touched)}">
+        </mat-form-field>
+        <mat-form-field class="register">
+            <mat-label>Last Name</mat-label>
+            <input appLettersOnly matInput type="text" formControlName="lastName" [ngClass]="{'invalid': formGroup.controls['lastName'].invalid && (formGroup.controls['lastName'].dirty || formGroup.controls['lastName'].touched)}">
+        </mat-form-field>
+        <mat-form-field class="email">
+            <mat-label>E-mail</mat-label>
+            <input matInput type="email" formControlName="email" [ngClass]="{'invalid': formGroup.controls['email'].invalid && (formGroup.controls['email'].dirty || formGroup.controls['email'].touched)}">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="register">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" [ngClass]="{'invalid': formGroup.controls['password'].invalid && (formGroup.controls['password'].dirty || formGroup.controls['password'].touched)}">
+        </mat-form-field>
+        <mat-form-field class="register">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" formControlName="confirmPassword" [ngClass]="{'invalid': formGroup.controls['confirmPassword'].invalid && (formGroup.controls['confirmPassword'].dirty || formGroup.controls['confirmPassword'].touched)}">
+        </mat-form-field>
+        <br>
+        <button mat-raised-button (click)="submitUserData()" [disabled]="formGroup.invalid">Continue</button>
+        <br>
+        <br>
+        <span>Already have an account? <a href="login">Sign in here</a></span>
+        <br>
+        <br>
+
+        <ng-container *ngIf="formGroup.controls['firstName'].errors">
+            <ng-container *ngIf="formGroup.controls['firstName'].errors['required']">
+            </ng-container>
+            <ng-container *ngIf="formGroup.controls['firstName'].errors['minlength']">
+                <div class="message">Please enter at least 2 characters</div>
+            </ng-container>
+            <ng-container *ngIf="formGroup.controls['firstName'].errors['pattern']">
+                <div class="message">Please use capital letters</div>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="formGroup.controls['lastName'].errors">
+            <ng-container *ngIf="formGroup.controls['lastName'].errors['required']">
+            </ng-container>
+            <ng-container  *ngIf="formGroup.controls['lastName'].errors['minlength']">
+                <div class="message">Please enter at least 2 characters</div>
+            </ng-container>
+            <ng-container *ngIf="formGroup.controls['lastName'].errors['pattern']">
+                <div class="message">Please use capital letters</div>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="formGroup.controls['email'].errors">
+            <ng-container *ngIf="formGroup.controls['email'].errors['required']">
+            </ng-container>
+            <ng-container *ngIf="formGroup.controls['email'].errors['pattern']">
+                <div class="message">Please write a valid e-mail address</div>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="formGroup.controls['password'].errors">
+            <ng-container *ngIf="formGroup.controls['password'].errors['required']">
+            </ng-container>
+            <ng-container *ngIf="formGroup.controls['password'].errors['pattern']">
+                <div class="message">Password must contain at least one number, one uppercase and a lowercase letter and at least 8 characters</div>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="formGroup.controls['confirmPassword'].errors">
+            <ng-container *ngIf="formGroup.controls['confirmPassword'].errors['required']">
+            </ng-container>
+            <ng-container *ngIf="formGroup.controls['confirmPassword'].errors['pattern']">
+                <div class="message">Password must contain at least one number, one uppercase and a lowercase letter and at least 8 characters</div>
+            </ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="formGroup.controls['confirmPassword'].errors && formGroup.controls['password'].touched || formGroup.controls['confirmPassword'].touched">
+            <span *ngIf="formGroup.get('confirmPassword')?.errors?.['passwordMismatch']">Repeat Password does not match password!
+        </span>
+        </ng-container>
+       
+    </form>
+   
+</div>

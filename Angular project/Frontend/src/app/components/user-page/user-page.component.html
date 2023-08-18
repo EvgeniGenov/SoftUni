@@ -1,0 +1,25 @@
+<p>Hello, {{this.userData.firstName}}</p>
+
+<mat-card>
+
+  <mat-card-content>
+    <mat-card-header>Profile</mat-card-header>
+    <div class="profile__wrapper">
+      <div class="profile__section__wrapper">
+        <p>Email: </p>
+        <p> {{this.userData.email}} </p>
+      </div>
+      <div class="profile__section__wrapper">
+        <p>First name: </p>
+        <p> {{this.userData.firstName}} </p>
+      </div>
+      <div class="profile__section__wrapper">
+        <p>Last name: </p>
+        <p> {{this.userData.lastName}} </p>
+      </div>
+    </div>
+    <button mat-raised-button>Change password</button>
+  </mat-card-content>
+  
+
+</mat-card>

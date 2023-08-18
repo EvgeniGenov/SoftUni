@@ -1,0 +1,33 @@
+mat-card {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+mat-card-header {
+    font-weight: 600;
+    font-size: 3rem;
+    color:#033449;
+}
+.profile__wrapper { 
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+    
+    text-align: center;
+    padding: 1rem;
+    
+}
+.profile__section__wrapper {
+    display: flex;
+    
+}
+button[mat-raised-button] {
+    font-size: 1em;
+    padding: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background-color:#044c6b;
+    color: white;
+    margin: 0 1rem 0rem 1rem;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+    <form [formGroup]="formGroup" class="login-form">
+        <p>Welcome</p>
+        <mat-form-field class="login">
+            <mat-label>E-mail</mat-label>
+            <input matInput formControlName="email" placeholder="Ex. sam@mail.com" class="email" type="email">
+        </mat-form-field>
+        <mat-form-field class="login">
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password" class="password" [ngClass]="{'invalid': formGroup.controls['email'].invalid && (formGroup.controls['email'].dirty || formGroup.controls['email'].touched)}">
+        </mat-form-field>
+        <br>
+        <button mat-button class="login-button" (click)="login()">Login</button>
+        <br>
+        <br>
+        <span>Forgot login information?</span><a mat-button href="forgot-password"> Click here</a>
+        <br>
+        <br>
+        <span>New User?</span><a mat-button href="register" (click)="login()"> Click here</a>
+    </form>
+    <br>
+    <ng-container *ngIf="formGroup.controls['email'].errors">
+        <ng-container *ngIf="formGroup.controls['email'].errors['pattern']">
+            <div class="message">Invalid credentials.</div>
+        </ng-container>
+    </ng-container>
+    <ng-container *ngIf="formGroup.controls['password'].errors">
+        <ng-container *ngIf="formGroup.controls['password'].errors['pattern']">
+            <div class="message">Invalid credentials.</div>
+        </ng-container>
+    </ng-container>
+
+</div>

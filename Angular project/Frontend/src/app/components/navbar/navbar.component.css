@@ -1,0 +1,34 @@
+.navbar__wrapper {
+    background-color: #022433;
+    height: 4rem;
+    max-width: 100%;
+}
+.navbar {
+    background-color: #022433;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+a {
+    padding-right: 1rem;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+a:hover {
+    color: rgb(166, 176, 209);
+}
+a[mat-button] {
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+}
+a[mat-raised-button] {
+    margin: 0 1rem;
+    color: white;
+    background-color: #033449;
+}
